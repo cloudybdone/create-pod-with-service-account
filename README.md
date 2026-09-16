@@ -75,7 +75,7 @@ Verify that the namespace exists:
 ```bash
 kubectl get namespace
 ```
-
+![get-namespaces](https://github.com/cloudybdone/create-pod-with-service-account/blob/main/ss01.png)
 The lab uses a dedicated namespace so that the ServiceAccount and Pod remain isolated from resources in other namespaces.
 
 ---
@@ -93,7 +93,7 @@ Verify the ServiceAccount:
 ```bash
 kubectl get serviceaccounts -n dev1
 ```
-
+![get-serviceAccount](https://github.com/cloudybdone/create-pod-with-service-account/blob/main/ss02.png)
 Expected resource:
 
 ```text
@@ -182,7 +182,7 @@ Now verify which ServiceAccount is associated with the Pod:
 ```bash
 kubectl get pod demo -n dev1 -o yaml | grep serviceAccount
 ```
-
+![get-podDemo](https://github.com/cloudybdone/create-pod-with-service-account/blob/main/ss03.png)
 The output should contain:
 
 ```text
